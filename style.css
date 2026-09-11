@@ -248,6 +248,34 @@
     font-size: 17px;
   }
 
+  /* ---------- Systems video background ---------- */
+
+  #systems {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .systems-video-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .systems-video-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(180deg, rgba(13,17,13,0.88) 0%, rgba(13,17,13,0.82) 40%, rgba(13,17,13,0.92) 100%);
+  }
+
+  #systems .wrap {
+    position: relative;
+    z-index: 2;
+  }
+
   /* ---------- Product plates ---------- */
 
   .plates {
