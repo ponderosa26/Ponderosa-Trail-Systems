@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog — Ponderosa Trail Systems</title>
+<meta name="description" content="Guides and notes on overland electronics, solar power, and 12V refrigeration from Ponderosa Trail Systems.">
+<link rel="icon" type="image/png" href="ponderosalogo1.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  /* Blog-specific additions */
+  .blog-hero {
+    padding: 176px 0 64px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .blog-hero h1 {
+    font-size: clamp(40px, 5.5vw, 60px);
+    color: var(--off-white);
+    margin-bottom: 18px;
+  }
+
+  .blog-hero p {
+    font-size: 18px;
+    color: var(--off-white-dim);
+    max-width: 540px;
+  }
+
+  .post-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .post-card {
+    border: 1px solid var(--line);
+    background: var(--panel);
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.2s ease;
+  }
+
+  .post-card:hover {
+    border-color: var(--moss);
+  }
+
+  .post-tag {
+    font-size: 13px;
+    color: var(--copper-light);
+    margin-bottom: 14px;
+  }
+
+  .post-card h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--off-white);
+    margin-bottom: 12px;
+  }
+
+  .post-card p {
+    color: var(--off-white-dim);
+    font-size: 15px;
+    margin-bottom: 20px;
+    flex-grow: 1;
+  }
+
+  .post-read-more {
+    font-size: 14px;
+    color: var(--moss);
+    font-weight: 500;
+  }
+
+  .post-full {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 96px 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .post-full .post-tag { margin-bottom: 20px; }
+
+  .post-full h2 {
+    font-size: clamp(32px, 4.5vw, 46px);
+    color: var(--off-white);
+    margin-bottom: 28px;
+  }
+
+  .post-full p {
+    color: var(--off-white-dim);
+    font-size: 17px;
+    margin-bottom: 22px;
+  }
+
+  .post-full h3 {
+    font-size: 24px;
+    color: var(--off-white);
+    margin: 36px 0 14px;
+    font-weight: 600;
+  }
+
+  .post-full ul {
+    color: var(--off-white-dim);
+    font-size: 17px;
+    margin: 0 0 22px 20px;
+  }
+
+  .post-full ul li { margin-bottom: 10px; }
+
+  .back-to-top {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 14px;
+    color: var(--moss);
+    text-decoration: none;
+  }
+
+  @media (max-width: 860px) {
+    .post-list { grid-template-columns: 1fr; }
+    .blog-hero { padding: 140px 0 48px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a href="index.html" class="brand">
+      <img class="brand-mark" src="ponderosalogo1.png" alt="Ponderosa Trail Systems logo">
+      Ponderosa Trail Systems
+    </a>
+    <nav class="nav-links">
+      <a href="index.html#systems">Systems</a>
+      <a href="index.html#why">Why Ponderosa</a>
+      <a href="blog.html">Blog</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <a href="index.html#contact" class="nav-cta">Get in touch</a>
+  </div>
+</header>
+
+<main>
+
+  <section class="blog-hero">
+    <div class="wrap">
+      <div class="kicker">The Ponderosa Journal</div>
+      <h1>Notes from the trail.</h1>
+      <p>Guides and breakdowns on overland electronics, solar power, and 12V refrigeration — written for people planning their own build, not just buying ours.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="post-list">
+
+        <a href="#post-battery-sizing" class="post-card reveal">
+          <div class="post-tag">Electronics</div>
+          <h3>Sizing a 12V Battery System for Your Build</h3>
+          <p>How to actually calculate the battery capacity your rig needs, instead of guessing and hoping it's enough.</p>
+          <span class="post-read-more">Read post →</span>
+        </a>
+
+        <a href="#post-solar-vs-alternator" class="post-card reveal">
+          <div class="post-tag">Solar</div>
+          <h3>Solar vs. Alternator Charging: What's Right for You</h3>
+          <p>The two most common ways to keep your battery bank topped off on the trail, and when each one makes sense.</p>
+          <span class="post-read-more">Read post →</span>
+        </a>
+
+        <a href="#post-12v-fridge" class="post-card reveal">
+          <div class="post-tag">Refrigeration</div>
+          <h3>Why a 12V Fridge Beats a Cooler on Longer Trips</h3>
+          <p>Ice runs get old fast. Here's the actual case for switching to compressor-based 12V refrigeration.</p>
+          <span class="post-read-more">Read post →</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <article class="post-full" id="post-battery-sizing">
+    <div class="post-tag">Electronics</div>
+    <h2>Sizing a 12V Battery System for Your Build</h2>
+    <p>The most common mistake in a first electrical build isn't picking the wrong battery chemistry — it's skipping the math entirely and buying based on budget or what a friend used. Battery capacity should come from your actual power draw, not a guess.</p>
+    <h3>Start with a load list</h3>
+    <p>Write down every 12V device you plan to run: fridge, lighting, water pump, fans, chargers, any radios or recovery gear. For each one, note its running wattage (or amps) and roughly how many hours a day you'll use it.</p>
+    <h3>Add it up, then add margin</h3>
+    <p>Multiply each device's amp draw by hours used to get daily amp-hours, then total them. Most builds add 20-30% on top of that total to account for inefficiencies and days when you use more power than planned.</p>
+    <h3>Match it to your charging plan</h3>
+    <p>A battery bank is only half the equation — it needs to be replenished as fast as you draw it down. If you're relying mostly on solar, size your panel output around your daily usage, not just the battery's total capacity.</p>
+    <a href="#top" class="back-to-top">↑ Back to top</a>
+  </article>
+
+  <article class="post-full" id="post-solar-vs-alternator">
+    <div class="post-tag">Solar</div>
+    <h2>Solar vs. Alternator Charging: What's Right for You</h2>
+    <p>Most builds end up using both, but understanding what each one is actually good at makes it easier to size your system correctly instead of over- or under-building.</p>
+    <h3>Alternator charging</h3>
+    <ul>
+      <li>Charges fast whenever the engine is running</li>
+      <li>Reliable regardless of weather or campsite orientation</li>
+      <li>Does nothing while you're parked for multiple days</li>
+    </ul>
+    <h3>Solar charging</h3>
+    <ul>
+      <li>Keeps charging even while stationary for extended stays</li>
+      <li>Output depends heavily on sun exposure and panel angle</li>
+      <li>Needs no engine time, which matters for quiet, low-impact camping</li>
+    </ul>
+    <p>If your trips involve a lot of driving between camps, alternator charging alone may cover you. If you tend to post up in one spot for several days at a time, solar becomes far more important to your setup.</p>
+    <a href="#top" class="back-to-top">↑ Back to top</a>
+  </article>
+
+  <article class="post-full" id="post-12v-fridge">
+    <div class="post-tag">Refrigeration</div>
+    <h2>Why a 12V Fridge Beats a Cooler on Longer Trips</h2>
+    <p>A cooler works fine for a weekend. Past that, the math and the hassle both start working against it.</p>
+    <h3>The ice problem</h3>
+    <p>Ice melts, and melted ice becomes standing water that soaks your food. On a multi-day trip, that usually means a supply run every couple of days just to keep things cold — which limits how remote you can actually get.</p>
+    <h3>Consistent, precise temperature</h3>
+    <p>Compressor-based 12V fridges hold a set temperature regardless of outside heat, rather than drifting as ice melts. That matters most for things like meat and dairy that need to stay reliably cold.</p>
+    <h3>The trade-off</h3>
+    <p>12V fridges draw continuous power, so they need to be part of your electrical planning — not just bolted in as an afterthought. This is exactly where a proper battery and charging setup (see the posts above) becomes the deciding factor in whether a fridge actually works for your trips.</p>
+    <a href="#top" class="back-to-top">↑ Back to top</a>
+  </article>
+
+</main>
+
+<footer>
+  <div class="wrap footer-row">
+    <div class="footer-brand">
+      <img src="ponderosalogo1.png" alt="Ponderosa Trail Systems logo" style="width:28px;height:28px;object-fit:contain;">
+      Ponderosa Trail Systems
+    </div>
+    <div class="footer-meta">&copy; 2026 Ponderosa Trail Systems. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  revealEls.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
