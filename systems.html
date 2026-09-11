@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Systems — Ponderosa Trail Systems</title>
+<meta name="description" content="Overland electrical systems from Ponderosa Trail Systems, organized by platform: campers and RVs, in-vehicle solutions, and truck campers.">
+<link rel="icon" type="image/png" href="ponderosalogo1.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  /* Systems page additions */
+  .systems-hero {
+    padding: 176px 0 64px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .systems-hero h1 {
+    font-size: clamp(40px, 5.5vw, 60px);
+    color: var(--off-white);
+    margin-bottom: 18px;
+  }
+
+  .systems-hero p {
+    font-size: 18px;
+    color: var(--off-white-dim);
+    max-width: 560px;
+  }
+
+  .consult-callout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    flex-wrap: wrap;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--copper-light);
+    padding: 32px 36px;
+  }
+
+  .consult-callout h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--off-white);
+    margin-bottom: 8px;
+  }
+
+  .consult-callout p {
+    color: var(--off-white-dim);
+    font-size: 15px;
+    max-width: 480px;
+  }
+
+  .category-block {
+    padding: 72px 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .category-banner {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 21 / 9;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    margin-bottom: 40px;
+  }
+
+  .category-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .category-banner::before,
+  .category-banner::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--copper-light);
+    z-index: 1;
+  }
+
+  .category-banner::before { top: 12px; left: 12px; border-right: none; border-bottom: none; }
+  .category-banner::after { bottom: 12px; right: 12px; border-left: none; border-top: none; }
+
+  .category-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+
+  .category-head h2 {
+    font-size: clamp(28px, 3.5vw, 38px);
+    color: var(--off-white);
+  }
+
+  .category-head p {
+    color: var(--off-white-dim);
+    font-size: 16px;
+    max-width: 440px;
+  }
+
+  .category-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+  }
+
+  .item-tile {
+    position: relative;
+    border: 1px solid var(--line);
+    background: var(--panel);
+    padding: 28px;
+  }
+
+  .item-tile::before,
+  .item-tile::after {
+    content: '';
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border: 2px solid var(--moss);
+  }
+
+  .item-tile::before { top: -1px; left: -1px; border-right: none; border-bottom: none; }
+  .item-tile::after { bottom: -1px; right: -1px; border-left: none; border-top: none; }
+
+  .item-tile h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--off-white);
+    margin-bottom: 10px;
+  }
+
+  .item-tile p {
+    color: var(--off-white-dim);
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+
+  .item-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--off-white-dim);
+  }
+
+  @media (max-width: 600px) {
+    .systems-hero { padding: 140px 0 48px; }
+    .consult-callout { padding: 24px; }
+    .category-banner { aspect-ratio: 4 / 3; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a href="index.html" class="brand">
+      <img class="brand-mark" src="ponderosalogo1.png" alt="Ponderosa Trail Systems logo">
+      Ponderosa Trail Systems
+    </a>
+    <nav class="nav-links">
+      <a href="systems.html">Systems</a>
+      <a href="index.html#why">Why Ponderosa</a>
+      <a href="blog.html">Blog</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <a href="index.html#contact" class="nav-cta">Get in touch</a>
+  </div>
+</header>
+
+<main>
+
+  <section class="systems-hero">
+    <div class="wrap">
+      <div class="kicker">Overland electrical systems</div>
+      <h1>Systems, organized by platform.</h1>
+      <p>Every build is different depending on what you're driving and towing. Browse by platform below, or start with a consulting session if you're not sure where to begin.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="consult-callout reveal">
+        <div>
+          <h3>Not sure what you need yet?</h3>
+          <p>Book a consulting session — we'll walk through your power draw, layout, and priorities before you spend a dollar on parts.</p>
+        </div>
+        <a href="index.html#contact" class="btn btn-primary">Book a session</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="category-block">
+    <div class="wrap">
+      <div class="category-banner reveal">
+        <img src="rv-photo.jpg" alt="Truck and travel trailer camped at sunset">
+      </div>
+      <div class="category-head reveal">
+        <h2>Campers &amp; RV</h2>
+        <p>Power and electrical systems built for towable and standalone camper platforms.</p>
+      </div>
+      <div class="category-items">
+        <div class="item-tile reveal">
+          <h3>Electrical Systems</h3>
+          <p>Wiring, control panels, and power management sized for camper and RV loads.</p>
+          <div class="item-status"><span class="dot"></span> In development</div>
+        </div>
+        <div class="item-tile reveal">
+          <h3>Solar Integration</h3>
+          <p>Panel and charge-controller setups designed to keep a camper's battery bank topped off.</p>
+          <div class="item-status"><span class="dot"></span> In development</div>
+        </div>
+        <div class="item-tile reveal">
+          <h3>12V Refrigeration</h3>
+          <p>Dometic-compatible refrigeration integrated cleanly into your camper's power system.</p>
+          <div class="item-status"><span class="dot"></span> In development</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="category-block">
+    <div class="wrap">
+      <div class="category-head reveal">
+        <h2>In-Vehicle Solutions</h2>
+        <p>Systems built directly into your daily-driven overland rig, not a separate towed platform.</p>
+      </div>
+      <div class="category-items">
+        <div class="item-tile reveal">
+          <h3>Electrical Systems</h3>
+          <p>Compact wiring and power management designed to fit inside an in-vehicle build.</p>
+          <div class="item-status"><span class="dot"></span> In development</div>
+        </div>
+        <div class="item-tile reveal">
+          <h3>Solar Integration</h3>
+          <p>Roof or ground-deployable panel setups sized for a vehicle-based electrical system.</p>
+          <div class="item-status"><span class="dot"></span> In development</div>
+        </div>
+        <div class="item-tile reveal">
+          <h3>12V Refrigeration</h3>
+          <p>Space-efficient refrigeration setups built for in-cabin or rear-cargo installs.</p>
+          <div class="item-status"><span class="dot"></span> In development</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="category-block">
+    <div class="wrap">
+      <div class="category-head reveal">
+        <h2>Truck Camper Solutions</h2>
+        <p>Systems purpose-built for the space and weight constraints of a truck camper platform.</p>
+      </div>
+      <div class="category-items">
+        <div class="item-tile reveal">
+          <h3>Electrical Systems</h3>
+          <p>Power management built around a truck camper's tighter footprint and payload limits.</p>
+          <div class="item-status"><span class="dot"></span> In development</div>
+        </div>
+        <div class="item-tile reveal">
+          <h3>Solar Integration</h3>
+          <p>Low-profile solar setups sized to keep a truck camper powered on extended trips.</p>
+          <div class="item-status"><span class="dot"></span> In development</div>
+        </div>
+        <div class="item-tile reveal">
+          <h3>12V Refrigeration</h3>
+          <p>Compact refrigeration options that fit a truck camper's limited interior space.</p>
+          <div class="item-status"><span class="dot"></span> In development</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap footer-row">
+    <div class="footer-brand">
+      <img src="ponderosalogo1.png" alt="Ponderosa Trail Systems logo" style="width:28px;height:28px;object-fit:contain;">
+      Ponderosa Trail Systems
+    </div>
+    <div class="footer-meta">&copy; 2026 Ponderosa Trail Systems. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  revealEls.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
