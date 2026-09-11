@@ -352,9 +352,44 @@
 
   .why-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 72px;
+    grid-template-columns: 0.9fr 1fr 1.1fr;
+    gap: 48px;
     align-items: start;
+  }
+
+  .why-image {
+    position: relative;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    border: 1px solid var(--line);
+  }
+
+  .why-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .why-image::before,
+  .why-image::after {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--copper-light);
+    z-index: 1;
+  }
+
+  .why-image::before {
+    top: 10px; left: 10px;
+    border-right: none;
+    border-bottom: none;
+  }
+
+  .why-image::after {
+    bottom: 10px; right: 10px;
+    border-left: none;
+    border-top: none;
   }
 
   .why-list {
@@ -522,7 +557,8 @@
     .stat { border-left: none; border-top: 1px solid var(--line); }
     .stat:first-child { border-top: none; }
     .plates { grid-template-columns: 1fr; }
-    .why-grid { grid-template-columns: 1fr; gap: 48px; }
+    .why-grid { grid-template-columns: 1fr; gap: 40px; }
+    .why-image { aspect-ratio: 16 / 9; order: -1; }
     .contact-grid { grid-template-columns: 1fr; }
     .hero { padding: 140px 0 88px; }
     section { padding: 76px 0; }
@@ -624,16 +660,17 @@
         </div>
 
         <div class="plate reveal">
-          <div class="plate-tag">Coming soon</div>
+          <div class="plate-tag">Available now</div>
           <svg class="plate-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="9" y="4" width="22" height="32" rx="1" stroke="currentColor" stroke-width="2"/>
-            <path d="M9 18H31" stroke="currentColor" stroke-width="2"/>
-            <path d="M14 10H18" stroke="currentColor" stroke-width="1.5"/>
-            <path d="M14 25H18" stroke="currentColor" stroke-width="1.5"/>
+            <rect x="10" y="6" width="20" height="28" rx="1" stroke="currentColor" stroke-width="2"/>
+            <path d="M15 6V4H25V6" stroke="currentColor" stroke-width="2"/>
+            <path d="M14 15H26" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M14 21H26" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M14 27H21" stroke="currentColor" stroke-width="1.5"/>
           </svg>
-          <h3>12V Refrigeration</h3>
-          <p>Dometic-compatible 12V refrigeration setups, integrated cleanly into your vehicle's power system.</p>
-          <div class="plate-status"><span class="dot"></span> In development</div>
+          <h3>Consulting</h3>
+          <p>A guided planning session to figure out what your rig actually needs — power draw, layout, and priorities — before you spend a dollar on parts.</p>
+          <div class="plate-status"><span class="dot" style="background: var(--copper-light);"></span> Book a session</div>
         </div>
 
       </div>
@@ -643,6 +680,9 @@
   <section class="why" id="why">
     <div class="wrap">
       <div class="why-grid">
+        <div class="why-image reveal">
+          <img src="https://images.pexels.com/photos/15157860/pexels-photo-15157860/free-photo-of-jeep-driving-on-dunes-in-desert.jpeg?auto=compress&amp;w=1260&amp;h=1600&amp;dpr=1&amp;fit=crop" alt="Off-road vehicle on the trail">
+        </div>
         <div class="reveal">
           <div class="section-head" style="margin-bottom: 0;">
             <h2>Why Ponderosa</h2>
@@ -678,35 +718,18 @@
 
   <section id="contact">
     <div class="wrap">
-      <div class="contact-grid">
-        <div class="contact-info reveal">
-          <h2>Let's talk about your build</h2>
-          <p>Whether you're planning a full electrical setup or just want to know what's coming, get in touch — we're happy to talk specifics.</p>
-          <div class="contact-detail">
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 4H20V20H4V4Z" stroke="currentColor" stroke-width="1.6"/><path d="M4 6L12 13L20 6" stroke="currentColor" stroke-width="1.6"/></svg>
-            ponderosatrailsystems@gmail.com
-          </div>
-          <div class="contact-detail">
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 21C12 21 19 14.5 19 9.5C19 5.36 15.64 2 11.5 2C7.36 2 4 5.36 4 9.5C4 14.5 12 21 12 21Z" stroke="currentColor" stroke-width="1.6"/><circle cx="11.5" cy="9.5" r="2.5" stroke="currentColor" stroke-width="1.6"/></svg>
-            Based in the U.S. — shipping nationwide
-          </div>
+      <div class="contact-info reveal" style="max-width: 560px;">
+        <h2>Let's talk about your build</h2>
+        <p>Whether you're planning a full electrical setup or just want to know what's coming, get in touch — we're happy to talk specifics.</p>
+        <div class="contact-detail">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 4H20V20H4V4Z" stroke="currentColor" stroke-width="1.6"/><path d="M4 6L12 13L20 6" stroke="currentColor" stroke-width="1.6"/></svg>
+          ponderosatrailsystems@gmail.com
         </div>
-        <form id="contact-form" class="reveal">
-          <div class="form-row">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
-          </div>
-          <div class="form-row">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-          </div>
-          <div class="form-row">
-            <label for="message">What are you building?</label>
-            <textarea id="message" name="message" required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary">Send message</button>
-          <div class="form-note">This form isn't connected to email yet — let's set that up once the site is live.</div>
-        </form>
+        <div class="contact-detail">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 21C12 21 19 14.5 19 9.5C19 5.36 15.64 2 11.5 2C7.36 2 4 5.36 4 9.5C4 14.5 12 21 12 21Z" stroke="currentColor" stroke-width="1.6"/><circle cx="11.5" cy="9.5" r="2.5" stroke="currentColor" stroke-width="1.6"/></svg>
+          Based in the U.S. — shipping nationwide
+        </div>
+        <a href="mailto:ponderosatrailsystems@gmail.com" class="btn btn-primary" style="margin-top: 28px;">Email us</a>
       </div>
     </div>
   </section>
@@ -735,16 +758,6 @@
     });
   }, { threshold: 0.15 });
   revealEls.forEach(el => observer.observe(el));
-
-  // Prevent actual submission since there's no backend yet
-  const form = document.getElementById('contact-form');
-  if (form) {
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      alert('Thanks! This form will be connected to send real messages once the site is live.');
-      form.reset();
-    });
-  }
 </script>
 
 </body>
