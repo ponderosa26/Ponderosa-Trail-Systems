@@ -75,6 +75,7 @@
     flex-wrap: wrap;
     background: var(--panel);
     border: 1px solid var(--line);
+    border-radius: var(--radius);
     border-left: 3px solid var(--copper-light);
     padding: 32px 36px;
   }
@@ -104,6 +105,7 @@
     max-height: 280px;
     overflow: hidden;
     border: 1px solid var(--line);
+    border-radius: var(--radius);
     margin-bottom: 40px;
   }
 
@@ -155,8 +157,10 @@
   .item-tile {
     position: relative;
     border: 1px solid var(--line);
+    border-radius: var(--radius);
     background: var(--panel);
     padding: 28px;
+    overflow: hidden;
   }
 
   .item-tile::before,
@@ -168,8 +172,8 @@
     border: 2px solid var(--moss);
   }
 
-  .item-tile::before { top: -1px; left: -1px; border-right: none; border-bottom: none; }
-  .item-tile::after { bottom: -1px; right: -1px; border-left: none; border-top: none; }
+  .item-tile::before { top: 12px; left: 12px; border-right: none; border-bottom: none; }
+  .item-tile::after { bottom: 12px; right: 12px; border-left: none; border-top: none; }
 
   .item-tile h3 {
     font-size: 20px;
