@@ -6,6 +6,15 @@
 <title>Ponderosa Trail Systems — Overland Electronics</title>
 <link rel="icon" type="image/png" href="ponderosalogo1.png">
 <meta name="description" content="Ponderosa Trail Systems is a Utah Valley-based company helping overlanders build premium electronic, solar, and refrigeration solutions for their vehicles.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ponderosa Trail Systems — Overland Electronics">
+<meta property="og:description" content="A Utah Valley-based company helping overlanders build premium electronic, solar, and refrigeration solutions for their vehicles.">
+<meta property="og:image" content="https://ponderosatrailsystems.com/hero-photo.jpg">
+<meta property="og:url" content="https://ponderosatrailsystems.com/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ponderosa Trail Systems — Overland Electronics">
+<meta name="twitter:description" content="A Utah Valley-based company helping overlanders build premium electronic, solar, and refrigeration solutions for their vehicles.">
+<meta name="twitter:image" content="https://ponderosatrailsystems.com/hero-photo.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -22,6 +31,7 @@
     <nav class="nav-links">
       <a href="systems.html">Systems</a>
       <a href="#why">Why Ponderosa</a>
+      <a href="about.html">About</a>
       <a href="blog.html">Blog</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -193,19 +203,7 @@
   </div>
 </footer>
 
-<script>
-  // Reveal-on-scroll for elements marked .reveal
-  const revealEls = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('in');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.15 });
-  revealEls.forEach(el => observer.observe(el));
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>

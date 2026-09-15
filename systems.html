@@ -5,6 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Systems — Ponderosa Trail Systems</title>
 <meta name="description" content="Overland electrical systems from Ponderosa Trail Systems, organized by platform: campers and RVs, in-vehicle solutions, and truck campers.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Systems — Ponderosa Trail Systems">
+<meta property="og:description" content="Overland electrical systems organized by platform: campers and RVs, in-vehicle solutions, and truck campers.">
+<meta property="og:image" content="https://ponderosatrailsystems.com/rv-photo.jpg">
+<meta property="og:url" content="https://ponderosatrailsystems.com/systems.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Systems — Ponderosa Trail Systems">
+<meta name="twitter:description" content="Overland electrical systems organized by platform: campers and RVs, in-vehicle solutions, and truck campers.">
+<meta name="twitter:image" content="https://ponderosatrailsystems.com/rv-photo.jpg">
 <link rel="icon" type="image/png" href="ponderosalogo1.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -201,6 +210,7 @@
     <nav class="nav-links">
       <a href="systems.html">Systems</a>
       <a href="index.html#why">Why Ponderosa</a>
+      <a href="about.html">About</a>
       <a href="blog.html">Blog</a>
       <a href="index.html#contact">Contact</a>
     </nav>
@@ -246,17 +256,17 @@
       <div class="category-items">
         <div class="item-tile reveal">
           <h3>Electrical Systems</h3>
-          <p>Upgraded battery managment system to maximize charging from vehicle alternator over factory system.</p>
+          <p>Wiring, control panels, and power management sized for camper and RV loads.</p>
           <div class="item-status"><span class="dot"></span> In development</div>
         </div>
         <div class="item-tile reveal">
           <h3>Solar Integration</h3>
-          <p>Panel and charge-controller solar setup to recharge batteries and allow you to stay parked off grid for longer.</p>
+          <p>Panel and charge-controller setups designed to keep a camper's battery bank topped off.</p>
           <div class="item-status"><span class="dot"></span> In development</div>
         </div>
         <div class="item-tile reveal">
-          <h3>Total Control</h3>
-          <p>App control of 12v battery systems available to see directly from your phone</p>
+          <h3>12V Refrigeration</h3>
+          <p>Dometic-compatible refrigeration integrated cleanly into your camper's power system.</p>
           <div class="item-status"><span class="dot"></span> In development</div>
         </div>
       </div>
@@ -272,17 +282,17 @@
       <div class="category-items">
         <div class="item-tile reveal">
           <h3>Electrical Systems</h3>
-          <p>Clean power management systems designed specifically to cover your needs and protect your vehicle. </p>
+          <p>Compact wiring and power management designed to fit inside an in-vehicle build.</p>
           <div class="item-status"><span class="dot"></span> In development</div>
         </div>
         <div class="item-tile reveal">
           <h3>Solar Integration</h3>
-          <p>Roof mounted or portable ground panels to charge your vehicle while parked at camp</p>
+          <p>Roof or ground-deployable panel setups sized for a vehicle-based electrical system.</p>
           <div class="item-status"><span class="dot"></span> In development</div>
         </div>
         <div class="item-tile reveal">
-          <h3>Complete Syestems</h3>
-          <p>Colplete systems including Solar, Lighting, Starlink, 12V Refrigerator, and Dual Battery Managment. All manageable in the vehicle and on your phone</p>
+          <h3>12V Refrigeration</h3>
+          <p>Space-efficient refrigeration setups built for in-cabin or rear-cargo installs.</p>
           <div class="item-status"><span class="dot"></span> In development</div>
         </div>
       </div>
@@ -327,18 +337,7 @@
   </div>
 </footer>
 
-<script>
-  const revealEls = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('in');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.15 });
-  revealEls.forEach(el => observer.observe(el));
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>

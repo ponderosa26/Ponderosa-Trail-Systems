@@ -5,6 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Blog — Ponderosa Trail Systems</title>
 <meta name="description" content="Guides and notes on overland electronics, solar power, and 12V refrigeration from Ponderosa Trail Systems.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Blog — Ponderosa Trail Systems">
+<meta property="og:description" content="Guides and notes on overland electronics, solar power, and 12V refrigeration from Ponderosa Trail Systems.">
+<meta property="og:image" content="https://ponderosatrailsystems.com/why-photo.jpg">
+<meta property="og:url" content="https://ponderosatrailsystems.com/blog.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Blog — Ponderosa Trail Systems">
+<meta name="twitter:description" content="Guides and notes on overland electronics, solar power, and 12V refrigeration from Ponderosa Trail Systems.">
+<meta name="twitter:image" content="https://ponderosatrailsystems.com/why-photo.jpg">
 <link rel="icon" type="image/png" href="ponderosalogo1.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -137,6 +146,7 @@
     <nav class="nav-links">
       <a href="systems.html">Systems</a>
       <a href="index.html#why">Why Ponderosa</a>
+      <a href="about.html">About</a>
       <a href="blog.html">Blog</a>
       <a href="index.html#contact">Contact</a>
     </nav>
@@ -241,18 +251,7 @@
   </div>
 </footer>
 
-<script>
-  const revealEls = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('in');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.15 });
-  revealEls.forEach(el => observer.observe(el));
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
