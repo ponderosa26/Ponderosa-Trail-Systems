@@ -57,3 +57,28 @@ if (dots.length) {
   }, { rootMargin: '-45% 0px -50% 0px' });
   map.forEach((_, el) => spy.observe(el));
 }
+
+// Phone number is assembled here instead of sitting in the page HTML, so simple scrapers don't find it.
+(function () {
+  const raw = atob('MTgwMTg1NjQ5Mjg=');
+  const pretty = '(' + raw.slice(1, 4) + ') ' + raw.slice(4, 7) + '-' + raw.slice(7);
+  const msg = "Hey Connelly, I've been looking on the Ponderosa Trail Systems website and I've got a couple questions";
+
+  const showBtn = document.querySelector('[data-reveal-phone]');
+  if (showBtn) {
+    showBtn.addEventListener('click', () => {
+      const a = document.createElement('a');
+      a.href = 'tel:+' + raw;
+      a.textContent = pretty;
+      showBtn.replaceWith(a);
+    });
+  }
+
+  const textBtn = document.querySelector('[data-text-us]');
+  if (textBtn) {
+    textBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.location.href = 'sms:+' + raw + '?&body=' + encodeURIComponent(msg);
+    });
+  }
+})();
