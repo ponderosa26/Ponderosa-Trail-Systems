@@ -41,9 +41,17 @@
   </div>
 </header>
 
+<nav class="dot-nav" aria-label="Page sections">
+  <a href="#home" data-target="home" aria-label="Top"><span>01</span></a>
+  <a href="#systems" data-target="systems" aria-label="Packages"><span>02</span></a>
+  <a href="#gallery" data-target="gallery" aria-label="Gallery"><span>03</span></a>
+  <a href="#why" data-target="why" aria-label="Why Ponderosa"><span>04</span></a>
+  <a href="#contact" data-target="contact" aria-label="Contact"><span>05</span></a>
+</nav>
+
 <main id="top">
 
-  <section class="hero">
+  <section class="hero" id="home">
     <svg class="contour-bg" viewBox="0 0 1160 520" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M-50 460 C 150 420, 250 480, 400 440 S 650 380, 800 420 S 1050 470, 1250 430" stroke="#1B3A2A" stroke-width="1.5" fill="none"/>
       <path d="M-50 490 C 150 450, 260 510, 420 470 S 660 410, 820 450 S 1060 500, 1250 460" stroke="#1B3A2A" stroke-width="1.5" fill="none"/>
@@ -51,33 +59,24 @@
       <path d="M-50 330 C 180 280, 320 350, 480 300 S 720 240, 880 290 S 1080 340, 1250 300" stroke="#24492F" stroke-width="1.5" fill="none" opacity="0.5"/>
     </svg>
     <div class="wrap hero-inner">
-      <h1>Power systems built for where the road ends.</h1>
+      <h1>Power built for<br>where the road ends.</h1>
       <p>A Utah Valley-based company helping overlanders build premium solutions to their overland electronic needs — engineered to hold up off-grid, not just on paper.</p>
       <div class="hero-actions">
+        <a href="systems.html#packages" class="btn btn-secondary btn-arrow">Explore packages</a>
         <a href="#contact" class="btn btn-primary">Get in touch</a>
-        <a href="systems.html" class="btn btn-secondary">View systems</a>
       </div>
     </div>
+    <div class="scroll-cue" aria-hidden="true"><span>Scroll</span></div>
   </section>
 
-  <div class="stat-strip surface-night ridge-top">
-    <div class="wrap">
-      <div class="stat-grid">
-        <div class="stat">
-          <div class="stat-number">12V</div>
-          <div class="stat-label">Systems engineered for real off-grid loads</div>
-        </div>
-        <div class="stat">
-          <div class="stat-number">3</div>
-          <div class="stat-label">Core product lines in development</div>
-        </div>
-        <div class="stat">
-          <div class="stat-number">100%</div>
-          <div class="stat-label">Built and tested for trail conditions</div>
-        </div>
-      </div>
+  <nav class="quick-strip surface-night ridge-top" aria-label="Quick links">
+    <div class="wrap quick-grid">
+      <a href="systems.html#packages" class="quick-item"><span class="quick-label">Packages</span><span class="quick-sub">Foundation to Expedition</span></a>
+      <a href="systems.html#consulting" class="quick-item"><span class="quick-label">Consulting</span><span class="quick-sub">Plan the right build</span></a>
+      <a href="blog.html" class="quick-item"><span class="quick-label">Journal</span><span class="quick-sub">Guides from the trail</span></a>
+      <a href="about.html" class="quick-item"><span class="quick-label">Our story</span><span class="quick-sub">Built by someone who lives it</span></a>
     </div>
-  </div>
+  </nav>
 
   <section id="systems">
     <video class="systems-video-bg" autoplay muted loop playsinline poster="systems-bg-poster.jpg">
@@ -85,7 +84,7 @@
     </video>
     <div class="systems-video-overlay"></div>
     <div class="wrap">
-      <div class="section-head reveal">
+      <div class="section-head reveal" data-num="02">
         <h2>Three ways to build your electrical system</h2>
         <p>Pick the package that fits your trip. Each one is a complete electrical rework for an existing overland build. Not sure which fits? Start with a consulting session.</p>
       </div>
@@ -141,9 +140,9 @@
     </div>
   </section>
 
-  <section class="gallery surface-night">
+  <section class="gallery surface-night" id="gallery">
     <div class="wrap">
-      <div class="section-head reveal">
+      <div class="section-head reveal" data-num="03">
         <h2>Built where we play</h2>
         <p>Utah's canyons, fall-color mountain roads and desert slickrock are the test bench. Every system is designed around trips like these.</p>
       </div>
@@ -164,7 +163,7 @@
           <img src="why-photo.jpg" alt="Overland camp setup at dusk">
         </div>
         <div class="why-text reveal">
-          <div class="section-head">
+          <div class="section-head" data-num="04">
             <h2>Why Ponderosa</h2>
             <p>We design for the trip that doesn't go as planned — where reliability matters more than a spec sheet.</p>
           </div>

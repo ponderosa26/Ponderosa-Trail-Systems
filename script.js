@@ -41,3 +41,19 @@ if (siteHeader && menuToggle) {
   document.addEventListener('pointerdown', (e) => { if (!siteHeader.contains(e.target)) setMenu(false); });
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setMenu(false); });
 }
+
+// Side indicator: highlight the section currently in view
+const dots = document.querySelectorAll('.dot-nav a');
+if (dots.length) {
+  const map = new Map();
+  dots.forEach(a => { const el = document.getElementById(a.dataset.target); if (el) map.set(el, a); });
+  const spy = new IntersectionObserver((entries) => {
+    entries.forEach(en => {
+      if (en.isIntersecting) {
+        dots.forEach(d => d.classList.remove('active'));
+        map.get(en.target).classList.add('active');
+      }
+    });
+  }, { rootMargin: '-45% 0px -50% 0px' });
+  map.forEach((_, el) => spy.observe(el));
+}
