@@ -421,7 +421,7 @@ header.menu-open .menu-toggle span:nth-child(2) { top: 20px; transform: rotate(-
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: linear-gradient(180deg, rgba(247, 245, 239, 0.74) 0%, rgba(247, 245, 239, 0.38) 45%, rgba(247, 245, 239, 0.62) 100%);
+  background: linear-gradient(180deg, rgba(247, 245, 239, 0.58) 0%, rgba(247, 245, 239, 0.2) 45%, rgba(247, 245, 239, 0.42) 100%);
 }
 
 #systems .wrap { position: relative; z-index: 2; }
