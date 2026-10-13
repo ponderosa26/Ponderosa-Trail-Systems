@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ponderosa Trail Systems — Overland Electronics</title>
+<meta name="theme-color" content="#0b100c">
 <link rel="icon" type="image/png" href="ponderosalogo1.png">
 <meta name="description" content="Ponderosa Trail Systems is a Utah Valley-based company helping overlanders build premium electronic, solar, and refrigeration solutions for their vehicles.">
 <meta property="og:type" content="website">
@@ -17,7 +18,7 @@
 <meta name="twitter:image" content="https://ponderosatrailsystems.com/hero-photo.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Caveat+Brush&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -28,7 +29,7 @@
       <img class="brand-mark" src="ponderosalogo1.png" alt="Ponderosa Trail Systems logo">
       Ponderosa Trail Systems
     </a>
-    <nav class="nav-links">
+    <nav class="nav-links" id="site-menu">
       <a href="systems.html">Systems</a>
       <a href="#why">Why Ponderosa</a>
       <a href="about.html">About</a>
@@ -36,6 +37,7 @@
       <a href="#contact">Contact</a>
     </nav>
     <a href="#contact" class="nav-cta">Get in touch</a>
+    <button class="menu-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="site-menu"><span></span><span></span><span></span></button>
   </div>
 </header>
 
@@ -49,8 +51,7 @@
       <path d="M-50 330 C 180 280, 320 350, 480 300 S 720 240, 880 290 S 1080 340, 1250 300" stroke="#24492F" stroke-width="1.5" fill="none" opacity="0.5"/>
     </svg>
     <div class="wrap hero-inner">
-      <div class="kicker">Overland vehicle electronics</div>
-      <h1>Power systems built for <em>where the road ends.</em></h1>
+      <h1>Power systems built for where the road ends.</h1>
       <p>A Utah Valley-based company helping overlanders build premium solutions to their overland electronic needs — engineered to hold up off-grid, not just on paper.</p>
       <div class="hero-actions">
         <a href="#contact" class="btn btn-primary">Get in touch</a>
@@ -59,7 +60,7 @@
     </div>
   </section>
 
-  <div class="stat-strip">
+  <div class="stat-strip surface-night ridge-top">
     <div class="wrap">
       <div class="stat-grid">
         <div class="stat">
@@ -91,7 +92,6 @@
       <div class="plates">
 
         <div class="plate reveal">
-          <div class="plate-tag">Coming soon</div>
           <svg class="plate-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M20 4L8 22H18L16 36L32 16H21L20 4Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
           </svg>
@@ -101,7 +101,6 @@
         </div>
 
         <div class="plate reveal">
-          <div class="plate-tag">Coming soon</div>
           <svg class="plate-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="6" y="10" width="28" height="18" rx="1" stroke="currentColor" stroke-width="2"/>
             <path d="M12 10V6H28V10" stroke="currentColor" stroke-width="2"/>
@@ -114,7 +113,6 @@
         </div>
 
         <div class="plate reveal">
-          <div class="plate-tag">Available now</div>
           <svg class="plate-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="10" y="6" width="20" height="28" rx="1" stroke="currentColor" stroke-width="2"/>
             <path d="M15 6V4H25V6" stroke="currentColor" stroke-width="2"/>
@@ -124,29 +122,28 @@
           </svg>
           <h3>Consulting</h3>
           <p>A guided planning session to figure out what your rig actually needs — power draw, layout, and priorities — before you spend a dollar on parts.</p>
-          <div class="plate-status"><span class="dot" style="background: var(--copper-light);"></span> Book a session</div>
+          <div class="plate-status live"><span class="dot"></span> Available now</div>
         </div>
 
       </div>
-      <div style="margin-top: 40px; text-align: center;">
+      <div class="section-cta">
         <a href="systems.html" class="btn btn-secondary">View all systems</a>
       </div>
     </div>
   </section>
 
-  <section class="why" id="why">
+  <section class="why surface-pine ridge-top ridge-b" id="why">
     <div class="wrap">
       <div class="why-grid">
         <div class="why-image reveal">
           <img src="why-photo.jpg" alt="Overland camp setup at dusk">
         </div>
-        <div class="reveal">
-          <div class="section-head" style="margin-bottom: 0;">
+        <div class="why-text reveal">
+          <div class="section-head">
             <h2>Why Ponderosa</h2>
             <p>We design for the trip that doesn't go as planned — where reliability matters more than a spec sheet.</p>
           </div>
-        </div>
-        <div class="why-list reveal">
+          <div class="why-list">
           <div class="why-item">
             <svg class="why-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L2 21H22L12 2Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
             <div>
@@ -168,25 +165,26 @@
               <p>Clear documentation and sensible layouts, so you spend your time on the trail instead of troubleshooting wiring.</p>
             </div>
           </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="contact">
+  <section id="contact" class="surface-night ridge-top">
     <div class="wrap">
-      <div class="contact-info reveal" style="max-width: 560px; margin: 0 auto; text-align: center;">
+      <div class="contact-info reveal">
         <h2>Let's talk about your build</h2>
-        <p style="margin-left: auto; margin-right: auto;">Whether you're planning a full electrical setup or just want to know what's coming, get in touch — we're happy to talk specifics.</p>
-        <div class="contact-detail" style="justify-content: center;">
+        <p>Whether you're planning a full electrical setup or just want to know what's coming, get in touch — we're happy to talk specifics.</p>
+        <div class="contact-detail">
           <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 4H20V20H4V4Z" stroke="currentColor" stroke-width="1.6"/><path d="M4 6L12 13L20 6" stroke="currentColor" stroke-width="1.6"/></svg>
           ponderosatrailsystems@gmail.com
         </div>
-        <div class="contact-detail" style="justify-content: center;">
+        <div class="contact-detail">
           <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 21C12 21 19 14.5 19 9.5C19 5.36 15.64 2 11.5 2C7.36 2 4 5.36 4 9.5C4 14.5 12 21 12 21Z" stroke="currentColor" stroke-width="1.6"/><circle cx="11.5" cy="9.5" r="2.5" stroke="currentColor" stroke-width="1.6"/></svg>
-          Based in the U.S. — shipping nationwide
+          Utah Valley, Utah — shipping nationwide
         </div>
-        <a href="mailto:ponderosatrailsystems@gmail.com" class="btn btn-primary" style="margin-top: 28px;">Email us</a>
+        <a href="mailto:ponderosatrailsystems@gmail.com" class="btn btn-primary">Email us</a>
       </div>
     </div>
   </section>
@@ -196,7 +194,7 @@
 <footer>
   <div class="wrap footer-row">
     <div class="footer-brand">
-      <img src="ponderosalogo1.png" alt="Ponderosa Trail Systems logo" style="width:28px;height:28px;object-fit:contain;">
+      <img class="footer-mark" src="ponderosalogo1.png" alt="Ponderosa Trail Systems logo">
       Ponderosa Trail Systems
     </div>
     <div class="footer-meta">&copy; 2026 Ponderosa Trail Systems. All rights reserved.</div>
