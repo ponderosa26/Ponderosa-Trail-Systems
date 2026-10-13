@@ -1364,3 +1364,9 @@ footer {
   .hero-actions .btn { width: 100%; }
   .wrap { padding: 0 20px; }
 }
+
+.contact-actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 14px; margin-top: 28px; }
+.contact-info .contact-actions .btn { margin-top: 0; }
+.contact-detail a { text-decoration: none; }
+.contact-detail a:hover { text-decoration: underline; }
+@media (max-width: 560px) { .contact-actions .btn { width: 100%; } }
