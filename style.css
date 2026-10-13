@@ -129,7 +129,7 @@ section { padding: 112px 0; }
 .surface-pine  { --surface: var(--mist);  --card: #ffffff; background: var(--surface); }
 
 /* Dark areas (photo heroes, header, footer, forest panels) use light text */
-header, .hero, .systems-hero, .about-hero, footer, .contact-info, .consult-callout {
+header, .hero, .systems-hero, .about-hero, #systems, footer, .contact-info, .consult-callout {
   --bone: #F1EEE4;
   --bone-dim: #B9BFB6;
   --line: rgba(236, 232, 220, 0.16);
@@ -421,7 +421,7 @@ header.menu-open .menu-toggle span:nth-child(2) { top: 20px; transform: rotate(-
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: linear-gradient(180deg, rgba(247, 245, 239, 0.58) 0%, rgba(247, 245, 239, 0.2) 45%, rgba(247, 245, 239, 0.42) 100%);
+  background: linear-gradient(180deg, rgba(10, 15, 11, 0.4) 0%, rgba(10, 15, 11, 0.22) 50%, rgba(10, 15, 11, 0.5) 100%);
 }
 
 #systems .wrap { position: relative; z-index: 2; }
@@ -439,15 +439,16 @@ header.menu-open .menu-toggle span:nth-child(2) { top: 20px; transform: rotate(-
   padding: 36px 30px 30px;
   border-radius: var(--leaf);
   border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.92);
-  box-shadow: 0 10px 30px rgba(27, 34, 32, 0.08);
+  background: rgba(10, 20, 14, 0.62);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
 }
 
 .plate-icon {
   width: 40px;
   height: 40px;
   margin-bottom: 22px;
-  color: var(--moss);
+  color: var(--sage);
 }
 
 .plate h3 { margin-bottom: 12px; font-size: 1.5rem; }
@@ -478,6 +479,10 @@ header.menu-open .menu-toggle span:nth-child(2) { top: 20px; transform: rotate(-
   background: rgba(183, 122, 63, 0.16);
   color: #8A5420;
 }
+
+#systems .plate-status { background: rgba(157, 186, 154, 0.18); color: var(--sage); }
+#systems .plate-status.live { background: rgba(211, 154, 94, 0.2); color: var(--copper-hi); }
+#systems .section-head h2, #systems .section-head p { text-shadow: 0 2px 16px rgba(0, 0, 0, 0.5); }
 
 .dot {
   width: 7px;
