@@ -18,15 +18,20 @@
   --moss: #3D6B4A;
   --sage: #9DBA9A;
 
-  /* text */
-  --bone: #ECE8DC;
-  --bone-dim: #A9AFA6;
+  /* light surfaces (default) */
+  --paper: #F7F5EF;
+  --mist: #E8EEE4;
+
+  /* text: dark ink on light, flipped inside .on-dark areas below */
+  --bone: #1B2220;
+  --bone-dim: #4E5A54;
+  --tint: rgba(27, 34, 32, 0.07);
 
   /* accent */
-  --copper: #B77A3F;
+  --copper: #A9692F;
   --copper-hi: #D39A5E;
 
-  --line: rgba(236, 232, 220, 0.13);
+  --line: rgba(27, 34, 32, 0.14);
 
   /* type */
   --font-display: 'Archivo', 'Arial Narrow', Arial, sans-serif;
@@ -40,8 +45,8 @@
   --ridge-h: 84px;
 
   /* current surface (set by .surface-night / .surface-pine) */
-  --surface: var(--night);
-  --card: var(--pine);
+  --surface: var(--paper);
+  --card: #ffffff;
 
   /* aliases kept so older inline references keep working */
   --black: var(--night);
@@ -60,7 +65,7 @@ html {
 }
 
 body {
-  background: var(--night);
+  background: var(--paper);
   color: var(--bone);
   font-family: var(--font-text);
   font-size: 17px;
@@ -120,8 +125,16 @@ section { padding: 112px 0; }
 
 /* ---------- Surfaces and ridge-line edges ---------- */
 
-.surface-night { --surface: var(--night); --card: var(--pine); background: var(--surface); }
-.surface-pine  { --surface: var(--pine);  --card: var(--night); background: var(--surface); }
+.surface-night { --surface: var(--paper); --card: #ffffff; background: var(--surface); }
+.surface-pine  { --surface: var(--mist);  --card: #ffffff; background: var(--surface); }
+
+/* Dark areas (photo heroes, header, footer, forest panels) use light text */
+header, .hero, .systems-hero, .about-hero, footer, .contact-info, .consult-callout {
+  --bone: #F1EEE4;
+  --bone-dim: #B9BFB6;
+  --line: rgba(236, 232, 220, 0.16);
+  --tint: rgba(236, 232, 220, 0.1);
+}
 
 /* A ridge line drawn in the section's own colour, rising over whatever sits above it */
 .ridge-top { position: relative; }
@@ -221,7 +234,7 @@ header.scrolled .nav {
 .nav-cta {
   text-decoration: none;
   background: var(--copper);
-  color: #150e06;
+  color: #fff;
   font-weight: 600;
   font-size: 0.92rem;
   padding: 10px 20px;
@@ -278,11 +291,11 @@ header.menu-open .menu-toggle span:nth-child(2) { top: 20px; transform: rotate(-
   transition: background 0.2s ease, border-color 0.2s ease;
 }
 
-.btn-primary { background: var(--copper); color: #150e06; }
+.btn-primary { background: var(--copper); color: #fff; }
 .btn-primary:hover { background: var(--copper-hi); }
 
-.btn-secondary { border-color: rgba(236, 232, 220, 0.45); color: var(--bone); }
-.btn-secondary:hover { background: rgba(236, 232, 220, 0.1); border-color: var(--bone); }
+.btn-secondary { border-color: var(--bone); color: var(--bone); }
+.btn-secondary:hover { background: var(--tint); }
 
 /* ---------- Page heroes (home, systems, about, blog) ---------- */
 
@@ -408,7 +421,7 @@ header.menu-open .menu-toggle span:nth-child(2) { top: 20px; transform: rotate(-
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: linear-gradient(180deg, rgba(10, 15, 11, 0.88) 0%, rgba(10, 15, 11, 0.8) 45%, rgba(10, 15, 11, 0.92) 100%);
+  background: linear-gradient(180deg, rgba(247, 245, 239, 0.9) 0%, rgba(247, 245, 239, 0.82) 50%, rgba(247, 245, 239, 0.93) 100%);
 }
 
 #systems .wrap { position: relative; z-index: 2; }
@@ -426,16 +439,15 @@ header.menu-open .menu-toggle span:nth-child(2) { top: 20px; transform: rotate(-
   padding: 36px 30px 30px;
   border-radius: var(--leaf);
   border: 1px solid var(--line);
-  background: rgba(10, 20, 14, 0.78);
-  -webkit-backdrop-filter: blur(6px);
-  backdrop-filter: blur(6px);
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 10px 30px rgba(27, 34, 32, 0.08);
 }
 
 .plate-icon {
   width: 40px;
   height: 40px;
   margin-bottom: 22px;
-  color: var(--sage);
+  color: var(--moss);
 }
 
 .plate h3 { margin-bottom: 12px; font-size: 1.5rem; }
@@ -454,8 +466,8 @@ header.menu-open .menu-toggle span:nth-child(2) { top: 20px; transform: rotate(-
   gap: 8px;
   padding: 6px 13px;
   border-radius: 999px;
-  background: rgba(61, 107, 74, 0.24);
-  color: var(--sage);
+  background: rgba(61, 107, 74, 0.14);
+  color: var(--forest-hi);
   font-size: 0.82rem;
   font-weight: 600;
   line-height: 1.2;
@@ -463,8 +475,8 @@ header.menu-open .menu-toggle span:nth-child(2) { top: 20px; transform: rotate(-
 
 .plate-status.live,
 .item-status.live {
-  background: rgba(183, 122, 63, 0.2);
-  color: var(--copper-hi);
+  background: rgba(183, 122, 63, 0.16);
+  color: #8A5420;
 }
 
 .dot {
@@ -516,7 +528,7 @@ header.menu-open .menu-toggle span:nth-child(2) { top: 20px; transform: rotate(-
   height: 24px;
   flex-shrink: 0;
   margin-top: 3px;
-  color: var(--copper-hi);
+  color: var(--copper);
 }
 
 .why-item h3 { font-size: 1.15rem; margin-bottom: 6px; }
@@ -563,9 +575,9 @@ header.menu-open .menu-toggle span:nth-child(2) { top: 20px; transform: rotate(-
 /* ---------- Footer ---------- */
 
 footer {
-  border-top: 1px solid var(--line);
   padding: 36px 0;
   background: var(--night);
+  color: var(--bone);
 }
 
 .footer-row {
@@ -699,6 +711,7 @@ footer {
 }
 
 .item-tile {
+  box-shadow: 0 6px 20px rgba(27, 34, 32, 0.06);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -777,7 +790,7 @@ footer {
 .signature-title {
   margin-top: 8px;
   font-size: 0.92rem;
-  color: var(--copper-hi);
+  color: #8A5420;
 }
 
 .values-grid {
@@ -787,6 +800,7 @@ footer {
 }
 
 .value-item {
+  box-shadow: 0 6px 20px rgba(27, 34, 32, 0.06);
   padding: 34px 28px;
   background: var(--card);
   border: 1px solid var(--line);
@@ -819,6 +833,7 @@ footer {
 }
 
 .post-card {
+  box-shadow: 0 6px 20px rgba(27, 34, 32, 0.06);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -838,8 +853,8 @@ footer {
   padding: 4px 12px;
   margin-bottom: 18px;
   border-radius: 999px;
-  background: rgba(61, 107, 74, 0.24);
-  color: var(--sage);
+  background: rgba(61, 107, 74, 0.14);
+  color: var(--forest-hi);
   font-size: 0.8rem;
   font-weight: 600;
   line-height: 1.3;
@@ -857,7 +872,7 @@ footer {
 .post-read-more {
   font-size: 0.92rem;
   font-weight: 600;
-  color: var(--copper-hi);
+  color: #8A5420;
 }
 
 .post-full {
@@ -893,7 +908,7 @@ footer {
   margin-top: 12px;
   font-size: 0.92rem;
   font-weight: 600;
-  color: var(--copper-hi);
+  color: #8A5420;
   text-decoration: none;
 }
 
