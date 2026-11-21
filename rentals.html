@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gear Rentals — Ponderosa Trail Systems</title>
+<meta name="description" content="Rent rooftop tents and camp gear from Ponderosa Trail Systems in Utah Valley. Request dates and we match the gear to your vehicle.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Gear Rentals — Ponderosa Trail Systems">
+<meta property="og:description" content="Rooftop tent and camp gear rentals in Utah Valley, matched to your vehicle.">
+<meta property="og:image" content="https://ponderosatrailsystems.com/trail-tent-night.jpg">
+<meta property="og:url" content="https://ponderosatrailsystems.com/rentals.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Gear Rentals — Ponderosa Trail Systems">
+<meta name="twitter:description" content="Rooftop tent and camp gear rentals in Utah Valley, matched to your vehicle.">
+<meta name="twitter:image" content="https://ponderosatrailsystems.com/trail-tent-night.jpg">
+<meta name="theme-color" content="#0b100c">
+<link rel="icon" type="image/png" href="ponderosalogo1.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Caveat+Brush&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a href="index.html" class="brand">
+      <img class="brand-mark" src="ponderosalogo1.png" alt="Ponderosa Trail Systems logo">
+      Ponderosa Trail Systems
+    </a>
+    <nav class="nav-links" id="site-menu">
+      <a href="rentals.html" aria-current="page">Rentals</a>
+      <a href="systems.html">Systems</a>
+      <a href="index.html#why">Why Ponderosa</a>
+      <a href="about.html">About</a>
+      <a href="blog.html">Blog</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <a href="index.html#contact" class="nav-cta">Get in touch</a>
+    <button class="menu-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="site-menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+
+  <section class="about-hero rentals-hero">
+    <img class="about-hero-bg" src="trail-tent-night.jpg" alt="Glowing tent under a night sky full of stars">
+    <div class="about-hero-overlay"></div>
+    <div class="wrap">
+      <h1>Gear to get you out there.</h1>
+      <p>Rent rooftop tents and camp gear without buying it all first. Tell us your dates and your vehicle, and we'll match the right setup.</p>
+      <div class="hero-actions">
+        <a href="#request" class="btn btn-primary">Request dates</a>
+        <a href="#rooftop-tents" class="btn btn-secondary btn-arrow">Browse gear</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="rental-category surface-night" id="rooftop-tents">
+    <div class="wrap">
+      <div class="category-head reveal">
+        <h2>Rooftop tents</h2>
+        <p>Our first rental category. Sleep off the ground, set up fast, and keep your cargo space free.</p>
+      </div>
+
+      <div class="rental-grid">
+
+        <!-- ===== RENTAL CARD TEMPLATE =====
+             To add a tent (or any gear), copy one whole <article class="rental-card">...</article> block,
+             then change the name, details and the data-gear value on the button.
+             Replace the .rental-media block with <img src="your-photo.jpg" alt="..."> when you have a photo. -->
+        <article class="rental-card reveal">
+          <div class="rental-media">
+            <svg class="rental-media-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 32L20 7L36 32H4Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M20 7V32M13 32L20 20L27 32" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+            <span>Photo coming soon</span>
+          </div>
+          <div class="rental-body">
+            <h3>Rooftop tent</h3>
+            <p>Fleet details are being finalized. Request your dates and we'll confirm which tent fits your trip, your vehicle and your roof rack.</p>
+            <dl class="rental-specs">
+              <div><dt>Sleeps</dt><dd>Listed per tent</dd></div>
+              <div><dt>Style</dt><dd>Listed per tent</dd></div>
+              <div><dt>Rate</dt><dd>Quoted with your request</dd></div>
+            </dl>
+            <a href="#request" class="btn btn-secondary btn-arrow rental-pick" data-gear="Rooftop tent">Request this</a>
+          </div>
+        </article>
+
+        <article class="rental-card rental-card-note reveal">
+          <div class="rental-body">
+            <h3>Will it fit my vehicle?</h3>
+            <p>Rooftop tents need a roof rack rated for the tent's weight while driving. Send us your vehicle and rack details and we'll check the fit before you reserve.</p>
+            <a href="#request" class="btn btn-secondary btn-arrow">Ask about fit</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="rental-category surface-pine ridge-top" id="more-gear">
+    <div class="wrap">
+      <div class="category-head reveal">
+        <h2>Camp kitchen &amp; more</h2>
+        <p>The rental fleet is growing. These are next.</p>
+      </div>
+
+      <div class="rental-grid rental-grid-3">
+        <article class="rental-card reveal">
+          <div class="rental-body">
+            <span class="plate-status"><span class="dot"></span> Coming soon</span>
+            <h3>Camp kitchen kits</h3>
+            <p>Stove, cookware, utensils and the basics for cooking at camp, packed together so you can grab and go.</p>
+          </div>
+        </article>
+        <article class="rental-card reveal">
+          <div class="rental-body">
+            <span class="plate-status"><span class="dot"></span> Coming soon</span>
+            <h3>Camp furniture &amp; lighting</h3>
+            <p>Tables, chairs and camp lighting to make a basecamp feel like home.</p>
+          </div>
+        </article>
+        <article class="rental-card reveal">
+          <div class="rental-body">
+            <span class="plate-status live"><span class="dot"></span> Tell us</span>
+            <h3>What would you rent?</h3>
+            <p>Looking for something specific? Tell us what you'd rent and it helps decide what we add next.</p>
+            <a href="#request" class="btn btn-secondary btn-arrow">Make a request</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="rental-steps surface-night ridge-top">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>How renting works</h2>
+        <p>Simple and personal. We're a small Utah Valley company, so you deal with us directly.</p>
+      </div>
+      <ol class="steps">
+        <li class="reveal"><span class="step-num">01</span><h3>Request your dates</h3><p>Tell us what you want, when you need it and what you're driving.</p></li>
+        <li class="reveal"><span class="step-num">02</span><h3>We confirm the fit</h3><p>We check availability and make sure the gear works with your vehicle.</p></li>
+        <li class="reveal"><span class="step-num">03</span><h3>Pick up in Utah Valley</h3><p>We go over setup together so you're comfortable before you head out.</p></li>
+        <li class="reveal"><span class="step-num">04</span><h3>Camp, then return it</h3><p>Enjoy the trip. Bring the gear back on your return date.</p></li>
+      </ol>
+      <p class="steps-note">Rates, deposits and rental terms are shared with every quote before you commit.</p>
+    </div>
+  </section>
+
+  <section class="rental-request surface-pine ridge-top" id="request">
+    <div class="wrap">
+      <div class="request-panel reveal">
+        <div class="section-head">
+          <h2>Request dates</h2>
+          <p>Fill this in and it opens an email to us with everything filled out. Prefer to text? Use the button below the form.</p>
+        </div>
+        <form class="rental-form" id="rental-form">
+          <label>Your name<input type="text" name="name" autocomplete="name" required></label>
+          <label>Email or phone<input type="text" name="contact" autocomplete="email" required></label>
+          <label>What do you want to rent?
+            <select name="gear">
+              <option>Rooftop tent</option>
+              <option>Camp kitchen kit (coming soon)</option>
+              <option>Other camp gear</option>
+            </select>
+          </label>
+          <label>Vehicle and roof rack<input type="text" name="vehicle" placeholder="e.g. 2015 4Runner with crossbars"></label>
+          <label>Pickup date<input type="date" name="start"></label>
+          <label>Return date<input type="date" name="end"></label>
+          <label class="field-wide">Anything else?<textarea name="notes" rows="3" placeholder="Group size, trip location, questions"></textarea></label>
+          <div class="field-wide request-actions">
+            <button type="submit" class="btn btn-primary">Send request</button>
+            <a href="mailto:ponderosatrailsystems@gmail.com" class="btn btn-secondary" data-text-us data-sms-body="Hey Connelly, I'm interested in renting gear from Ponderosa Trail Systems and I've got a couple questions">Text us instead</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="rental-pair surface-night">
+    <div class="wrap">
+      <div class="consult-callout reveal">
+        <div>
+          <h3>Building a vehicle setup too?</h3>
+          <p>Pair your rental with a reliable electrical foundation: dual battery, DC-DC charging and a fused panel ready for accessories.</p>
+        </div>
+        <a href="systems.html#packages" class="btn btn-primary">See electrical packages</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap footer-row">
+    <div class="footer-brand">
+      <img class="footer-mark" src="ponderosalogo1.png" alt="Ponderosa Trail Systems logo">
+      Ponderosa Trail Systems
+    </div>
+    <div class="footer-meta">&copy; 2026 Ponderosa Trail Systems. All rights reserved.</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

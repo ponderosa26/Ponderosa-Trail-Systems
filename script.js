@@ -74,11 +74,43 @@ if (dots.length) {
     });
   }
 
-  const textBtn = document.querySelector('[data-text-us]');
-  if (textBtn) {
+  document.querySelectorAll('[data-text-us]').forEach((textBtn) => {
     textBtn.addEventListener('click', (e) => {
       e.preventDefault();
-      window.location.href = 'sms:+' + raw + '?&body=' + encodeURIComponent(msg);
+      const body = textBtn.dataset.smsBody || msg;
+      window.location.href = 'sms:+' + raw + '?&body=' + encodeURIComponent(body);
     });
-  }
+  });
+})();
+
+// Rental request form: builds a ready-to-send email (no server needed)
+(function () {
+  const form = document.getElementById('rental-form');
+  if (!form) return;
+
+  // "Request this" buttons preselect the gear in the form
+  document.querySelectorAll('.rental-pick').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const sel = form.elements.gear;
+      Array.from(sel.options).forEach((o) => { if (o.text.indexOf(btn.dataset.gear) === 0) sel.value = o.value; });
+    });
+  });
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const f = form.elements;
+    const lines = [
+      'Name: ' + f.name.value,
+      'Contact: ' + f.contact.value,
+      'Gear: ' + f.gear.value,
+      'Vehicle / rack: ' + (f.vehicle.value || 'not provided'),
+      'Pickup: ' + (f.start.value || 'not set'),
+      'Return: ' + (f.end.value || 'not set'),
+      '',
+      f.notes.value || ''
+    ];
+    const subject = 'Rental request: ' + f.gear.value;
+    window.location.href = 'mailto:ponderosatrailsystems@gmail.com?subject=' + encodeURIComponent(subject) +
+      '&body=' + encodeURIComponent(lines.join('\n'));
+  });
 })();
