@@ -1551,3 +1551,14 @@ footer {
   .request-actions .btn { width: 100%; }
   .request-panel { padding: 44px 22px; }
 }
+
+/* nav fits six links + button */
+.nav-links a { white-space: nowrap; }
+@media (min-width: 861px) and (max-width: 1240px) {
+  .nav { gap: 12px; }
+  .nav-links { gap: 0; }
+  .nav-links a { padding: 8px 10px; letter-spacing: 0.1em; }
+  .brand { letter-spacing: 0.08em; }
+  .nav-cta { padding: 10px 16px; }
+}
+.rentals-hero .hero-actions { margin-top: 32px; }
